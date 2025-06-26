@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function Login() {com
   const [data, setData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -13,7 +13,7 @@ export default function Login() {
     setLoading(true);
     setError('');
     try {
-      await axios.post('https://authentication-3ynw.onrender.com/api/auth/login', data, { withCredentials: true });
+      await axios.post('https://authentication-3ynw.onrender./api/auth/login', data, { withCredentials: true });
       navigate('/');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
