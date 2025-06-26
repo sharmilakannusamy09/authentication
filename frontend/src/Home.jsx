@@ -7,7 +7,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/auth/me', { withCredentials: true })
+    axios.get('https://authentication-3ynw.onrender.com/api/auth/me', { withCredentials: true })
       .then(r => setU(r.data.user))
       .catch(() => setU(null));
   }, []);
